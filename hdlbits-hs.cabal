@@ -87,6 +87,9 @@ library
   exposed-modules:
     Example.Project
     Hdlbits.GettingStarted.StepOne
+    Hdlbits.GettingStarted.Zero
+    Hdlbits.ClashLanguage.Basics.SimpleWire
+    Hdlbits.ClashLanguage.Basics.Wire4
   default-language: Haskell2010
 
 -- Builds the executable 'clash', with hdlbits-hs project in scope

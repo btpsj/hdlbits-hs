@@ -20,7 +20,7 @@ topEntity = one
 -- Name the generated entity and its output port after the HDLBits problem.
 {-# ANN topEntity
   (Synthesize
-    { t_name = "step_one"
+    { t_name = "top_module"
     , t_inputs = []
     , t_output = PortName "one"
     }) #-}
