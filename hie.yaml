@@ -1,0 +1,12 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:hdlbits-hs"
+    - path: "./tests/doctests.hs"
+      component: "hdlbits-hs:doctests"
+    - path: "./tests"
+      component: "hdlbits-hs:test-library"
+    - path: "./bin/Clashi.hs"
+      component: "hdlbits-hs:exe:clashi"
+    - path: "./bin/Clash.hs"
+      component: "hdlbits-hs:exe:clash"
