@@ -1,9 +1,11 @@
 <!-- omit in toc -->
 # Simple Starter Project
+
 This starter project contains the scaffolding needed to integrate Clash with the Cabal and Stack build systems. It allows you to use dependencies from [Hackage](https://hackage.haskell.org/) easily.
 
 <!-- omit in toc -->
-# Table of Contents
+## Table of Contents
+
 - [Getting this project](#getting-this-project)
 - [Building and testing this project](#building-and-testing-this-project)
   - [Stack (Windows, Linux, MacOS) [recommended]](#stack-windows-linux-macos-recommended)
@@ -11,20 +13,23 @@ This starter project contains the scaffolding needed to integrate Clash with the
   - [REPL](#repl)
   - [IDE support](#ide-support)
 - [Project overview](#project-overview)
-  - [hdlbits-hs.cabal](#namecabal)
+  - [hdlbits-hs.cabal](#hdlbits-hscabal)
   - [cabal.project](#cabalproject)
   - [stack.yaml](#stackyaml)
   - [src/](#src)
   - [tests/](#tests)
 - [Change the license](#change-the-license)
 
-# Getting this project
+## Getting this project
+
 Stack users can run `stack new my-clash-project clash-lang/simple`. Cabal users can [download a zip](https://raw.githubusercontent.com/clash-lang/clash-starters/main/simple.zip) containing the project.
 
-# Building and testing this project
+## Building and testing this project
+
 There's a number of ways to build this project on your machine. The recommended way of doing so is using _Stack_, whose instructions will follow directly after this section.
 
-## Stack (Windows, Linux, MacOS) [recommended]
+### Stack (Windows, Linux, MacOS) [recommended]
+
 Install Stack using your package manager or refer to the [How to install](https://docs.haskellstack.org/en/stable/README/#how-to-install) section of the [Stack manual](https://docs.haskellstack.org/en/stable/README/).
 
 Build the project with:
@@ -47,7 +52,8 @@ stack run clash -- Example.Project --vhdl
 
 You can find the HDL files in `vhdl/`. The source can be found in `src/Example/Project.hs`.
 
-## Cabal (Linux, MacOS)
+### Cabal (Linux, MacOS)
+
 **The following instructions only work for Cabal >=3.0 and GHC >=8.4.**
 
 First, update your cabal package database:
@@ -77,26 +83,29 @@ cabal run clash -- Example.Project --vhdl
 
 You can find the HDL files in `vhdl/`. The source can be found in `src/Example/Project.hs`.
 
-## REPL
+### REPL
+
 Clash offers a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) as a quick way to try things, similar to Python's `python` or Ruby's `irb`. Stack users can open the REPL by invoking:
 
-```
+```bash
 stack run clashi
 ```
 
 Cabal users use:
 
-```
+```bash
 cabal run clashi
 ```
 
-## IDE support
+### IDE support
+
 We currently recommend Visual Studio Code in combination with the _Haskell_ plugin. All you need to do is open this folder in VSCode; it will prompt you to install the plugin.
 
-# Project overview
+## Project overview
+
 This section will give a tour of all the files present in this starter project. It's also a general introduction into Clash dependency management. It's not an introduction to Clash itself though. If you're looking for an introduction to Clash, read ["Clash.Tutorial" on Hackage](https://hackage.haskell.org/package/clash-prelude).
 
-```
+```text
 hdlbits-hs
 ├── bin
 │   ├── Clash.hs
@@ -115,7 +124,8 @@ hdlbits-hs
 └── stack.yaml
 ```
 
-## hdlbits-hs.cabal
+### hdlbits-hs.cabal
+
 This is the most important file in your project. It describes how to build your project. Even though it ends in `.cabal`, Stack will use this file too. It starts of with meta-information:
 
 ```yaml
@@ -207,7 +217,8 @@ test-suite test-library
 
 These testsuites are executed when using `stack test` or `cabal test`. Note that Cabal swallows the output if more than one testsuite is defined, as is the case here. You might want to consider running the testsuites separately. More on tests in [/tests](#tests).
 
-## cabal.project
+### cabal.project
+
 A `cabal.project` file is used to configure details of the build, more info can be found in the [Cabal user documentation](https://cabal.readthedocs.io/en/latest/cabal-project.html). We use it to make Cabal always generate GHC environment files, which is a feature Clash needs when using Cabal.
 
 ```haskell
@@ -219,7 +230,8 @@ write-ghc-environment-files: always
 
 `cabal.project` can be used to build multi-package projects, by extending `packages`.
 
-## stack.yaml
+### stack.yaml
+
 While Cabal fetches packages straight from Hackage (with a bias towards the latest versions), Stack works through _snapshots_. Snapshots are an index of packages from Hackage know to work well with each other. In addition to that, they specify a GHC version. These snapshots are curated by the community and FP Complete and can be found on [stackage.org](https://www.stackage.org/).
 
 ```yaml
@@ -233,7 +245,8 @@ guarantees that if a `stack build` works now, it will work in 10 years too.
 
 Note: If you need a newer Clash version, simply change the version bounds in `hdlbits-hs.cabal` and follow the hints given by Stack.
 
-## src/
+### src/
+
 This is where the source code of the project lives, as specified in `hdlbits-hs.cabal`. It contains a single file, `Example/Project.hs` which starts with:
 
 ```haskell
@@ -264,25 +277,26 @@ topEntity = plus
 
 as the comment says `topEntity` will get compiled by Clash if we ask it to compile this module:
 
-```
+```bash
 stack run clash -- Example.Project --vhdl
 ```
 
 or
 
-```
+```bash
 cabal run clash -- Example.Project --vhdl
 ```
 
 We could instead ask it to synthesize `plus` instead:
 
-```
+```bash
 stack run clash -- Example.Project --vhdl -main-is plus
 ```
 
 If you want to play around with Clash, this is probably where you would put all the definitions mentioned in ["Clash.Tutorial" on Hackage](https://hackage.haskell.org/package/clash-prelude).
 
-## tests/
+### tests/
+
 Most of this directory is scaffolding, with the meat of the tests being defined in `tests/Tests/Example/Project.hs`. Writing good test cases is pretty hard: edge cases are easy to forget both in the implementation and tests. To this end, it's a good idea to use _fuzz testing_. In this project we use [Hedgehog](https://hedgehog.qa/):
 
 ```haskell
@@ -304,7 +318,7 @@ tests = $(testGroupGenerator)
 
 We can run the tests using `stack test` or `cabal run test-library`:
 
-```
+```text
 .
   Tests.Example.Project
     plusIsCommutative: OK
@@ -313,5 +327,6 @@ We can run the tests using `stack test` or `cabal run test-library`:
 All 1 tests passed (0.00s)
 ```
 
-# Change the license
+## Change the license
+
 By default `hdlbits-hs.cabal` sets its `license` field to `BSD-2-Clause`. You might want to change this.
