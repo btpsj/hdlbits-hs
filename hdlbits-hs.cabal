@@ -1,9 +1,9 @@
 cabal-version:       2.4
 name:                hdlbits-hs
 version:             0.1
-license:             BSD-2-Clause
-author:              John Smith <john@example.com>
-maintainer:          John Smith <john@example.com>
+license:             MIT
+author:              Brandon Saint-John <branstj@gmail.com>
+maintainer:          Brandon Saint-John <branstj@gmail.com>
 
 common common-options
   default-extensions:
@@ -90,6 +90,21 @@ library
     Hdlbits.GettingStarted.Zero
     Hdlbits.ClashLanguage.Basics.SimpleWire
     Hdlbits.ClashLanguage.Basics.Wire4
+    Hdlbits.ClashLanguage.Basics.Notgate
+    Hdlbits.ClashLanguage.Basics.Andgate
+    Hdlbits.ClashLanguage.Basics.Norgate
+    Hdlbits.ClashLanguage.Basics.Xnorgate
+    Hdlbits.ClashLanguage.Basics.WireDecl
+    Hdlbits.ClashLanguage.Basics.Chip7458
+    Hdlbits.ClashLanguage.Vectors.Vector0
+    Hdlbits.ClashLanguage.Vectors.Vector1
+    Hdlbits.ClashLanguage.Vectors.Vector2
+    Hdlbits.ClashLanguage.Vectors.Vectorgates
+    Hdlbits.ClashLanguage.Vectors.Gates4
+    Hdlbits.ClashLanguage.Vectors.Vector3
+    Hdlbits.ClashLanguage.Vectors.Vectorr
+    Hdlbits.ClashLanguage.Vectors.Vector4
+    Hdlbits.ClashLanguage.Vectors.Vector5
   default-language: Haskell2010
 
 -- Builds the executable 'clash', with hdlbits-hs project in scope
