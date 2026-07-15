@@ -105,6 +105,10 @@ library
     Hdlbits.ClashLanguage.Vectors.Vectorr
     Hdlbits.ClashLanguage.Vectors.Vector4
     Hdlbits.ClashLanguage.Vectors.Vector5
+    Hdlbits.ClashLanguage.ModulesHierarchy.Module
+    Hdlbits.ClashLanguage.ModulesHierarchy.ModulePos
+    Hdlbits.ClashLanguage.ModulesHierarchy.ModuleName
+    Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift
   default-language: Haskell2010
 
 -- Builds the executable 'clash', with hdlbits-hs project in scope
