@@ -1,8 +1,17 @@
-# `hdlbits.01xz.net` in Clash
+# HDLBits in Clash
 
-Solutions to the Verilog exercises on [`hdlbits.01xz.net`](hdlbits.01xz.net) using Clash, the Haskell-based language for compiling to Verilog/VHDL.
+Solutions to the Verilog exercises on [HDLBits](hdlbits.01xz.net) using [Clash](https://clash-lang.org/), a Haskell-based hardware description language that compiles to Verilog/VHDL.
 
-For information on building, see [`BUILD.md`](./BUILD.md)
+## Building
+
+```bash
+stack build
+stack run clash -- Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift --verilog
+# Outputs a Verilog file at:
+# verilog/Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift.topEntity/top_module.v
+```
+
+For more information on building, see [`BUILD.md`](./BUILD.md)
 
 ## License
 
