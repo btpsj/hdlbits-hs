@@ -1,4 +1,4 @@
-module Hdlbits.ClashLanguage.Vectors.Vectorgates where
+module Hdlbits.ClashLanguage.Vectors.VectorGates where
 
 import Clash.Annotations.TH (makeTopEntityWithName)
 import Clash.Prelude

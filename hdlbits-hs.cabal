@@ -99,10 +99,10 @@ library
     Hdlbits.ClashLanguage.Vectors.Vector0
     Hdlbits.ClashLanguage.Vectors.Vector1
     Hdlbits.ClashLanguage.Vectors.Vector2
-    Hdlbits.ClashLanguage.Vectors.Vectorgates
+    Hdlbits.ClashLanguage.Vectors.VectorGates
     Hdlbits.ClashLanguage.Vectors.Gates4
     Hdlbits.ClashLanguage.Vectors.Vector3
-    Hdlbits.ClashLanguage.Vectors.Vectorr
+    Hdlbits.ClashLanguage.Vectors.VectorR
     Hdlbits.ClashLanguage.Vectors.Vector4
     Hdlbits.ClashLanguage.Vectors.Vector5
     Hdlbits.ClashLanguage.ModulesHierarchy.Module
