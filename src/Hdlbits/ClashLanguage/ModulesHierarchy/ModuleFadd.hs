@@ -37,13 +37,14 @@ add16 a b cin = (truncateB s, msb s)
 
 -- module add1 ( input a, input b, input cin, output sum, output cout )
 add1 :: Bit -> Bit -> Bit -> (Bit, Bit)
-add1 1 1 _ = (1, 1)
-add1 _ 1 1 = (1, 1)
-add1 1 _ 1 = (1, 1)
-add1 1 0 0 = (1, 0)
-add1 0 1 0 = (1, 0)
-add1 0 0 1 = (1, 0)
-add1 0 0 0 = (0, 0)
+add1 = undefined
+-- add1 1 1 _ = (1, 1)
+-- add1 _ 1 1 = (1, 1)
+-- add1 1 _ 1 = (1, 1)
+-- add1 1 0 0 = (1, 0)
+-- add1 0 1 0 = (1, 0)
+-- add1 0 0 1 = (1, 0)
+-- add1 0 0 0 = (0, 0)
 
 -- https://hdlbits.01xz.net/wiki/Module_fadd
 topEntity ::
