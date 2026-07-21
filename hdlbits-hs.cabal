@@ -109,6 +109,8 @@ library
     Hdlbits.ClashLanguage.ModulesHierarchy.ModulePos
     Hdlbits.ClashLanguage.ModulesHierarchy.ModuleName
     Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift
+    Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift8
+    Hdlbits.ClashLanguage.ModulesHierarchy.ModuleAdd
   default-language: Haskell2010
 
 -- Builds the executable 'clash', with hdlbits-hs project in scope
