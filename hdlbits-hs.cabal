@@ -111,6 +111,10 @@ library
     Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift
     Hdlbits.ClashLanguage.ModulesHierarchy.ModuleShift8
     Hdlbits.ClashLanguage.ModulesHierarchy.ModuleAdd
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.Wire
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.Gnd
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.AnotherGate
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.TwoGates
   default-language: Haskell2010
 
 -- Builds the executable 'clash', with hdlbits-hs project in scope
