@@ -3,9 +3,7 @@ module Hdlbits.Circuits.CombinationalLogic.BasicGates.CombineCircuits where
 import Clash.Annotations.TH (makeTopEntityWithName)
 import Clash.Prelude
 import Hdlbits.Circuits.CombinationalLogic.BasicGates.SimpleCircuitA (circuitA)
-
-circuitB :: Bit -> Bit -> Bit
-circuitB = (complement .) . xor
+import Hdlbits.Circuits.CombinationalLogic.BasicGates.SimpleCircuitB (circuitB)
 
 topEntity ::
   "x" ::: Bit ->
