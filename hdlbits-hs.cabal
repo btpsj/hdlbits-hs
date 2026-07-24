@@ -115,6 +115,13 @@ library
     Hdlbits.Circuits.CombinationalLogic.BasicGates.Gnd
     Hdlbits.Circuits.CombinationalLogic.BasicGates.AnotherGate
     Hdlbits.Circuits.CombinationalLogic.BasicGates.TwoGates
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.MoreLogicGates
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.Chip7420
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.TruthTable1
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.TwoBitEquality
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.SimpleCircuitA
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.SimpleCircuitB
+    Hdlbits.Circuits.CombinationalLogic.BasicGates.CombineCircuits
   default-language: Haskell2010
 
 -- Builds the executable 'clash', with hdlbits-hs project in scope
