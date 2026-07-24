@@ -1,6 +1,6 @@
 # HDLBits in Clash
 
-Solutions to the Verilog exercises on [HDLBits](hdlbits.01xz.net) using [Clash](https://clash-lang.org/), a Haskell-based hardware description language that compiles to Verilog/VHDL.
+Solutions to the Verilog exercises on [HDLBits](https://hdlbits.01xz.net) using [Clash](https://clash-lang.org/), a Haskell-based hardware description language that compiles to Verilog/VHDL.
 
 ## Building
 
